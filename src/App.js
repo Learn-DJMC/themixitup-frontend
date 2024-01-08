@@ -22,20 +22,18 @@ const App = () => {
   return (
     <>
       <Header />
-      <Routes> 
-      <Route path="/about-us" element={<AboutUs />} /> 
-      <Route path="*" element={<NotFound/>} />
-      <Route path="recipes" element={<RecipesIndex />} /> 
-      <Route path="recipes-protected-index" element={<RecipesProtectedIndex />} /> 
-      <Route path="/" element={< RecipesShow />} /> 
-      <Route path="signin" element={<SignIn />} /> 
-      <Route path="signup" element={<SignUp />} /> 
+      <Routes>
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="recipes" element={<RecipesIndex />} />
+        <Route path="recipes-protected-index" element={<RecipesProtectedIndex />} />
+        <Route path="/" element={< RecipesShow />} />
+        <Route path="signin" element={<SignIn />} />
+        <Route path="signup" element={<SignUp />} />
       </Routes>
       <Footer />
 
-      <div>
-        <h2> Mix it up ! </h2>
-      </div>
+
     </>
   );
 }
