@@ -11,6 +11,7 @@ import RecipesIndex from './Pages/RecipesIndex';
 import RecipesProtectedIndex from './Pages/RecipesProtectedIndex';
 import RecipesShow from './Pages/RecipesShow';
 import SignIn from './Pages/SignIn';
+import SignOut from './Pages/SignOut'
 import SignUp from './Pages/SignUp';
 import { Routes, Route } from 'react-router-dom';
 
@@ -29,9 +30,10 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
         <Route path="recipes" element={<RecipesIndex />} />
         <Route path="recipes-protected-index" element={<RecipesProtectedIndex />} />
-        <Route path="/" element={< RecipesShow />} />
+        <Route path="/show" element={< RecipesShow />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="signout" element={<SignOut />} />
       </Routes>
       <Footer />
 
