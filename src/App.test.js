@@ -1,8 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import Home from './Pages/Home';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("<Home /", () => {
+  it('has a heading', () => {
+    render(<BrowserRouter>
+    <App />
+    </BrowserRouter>) 
+
+screen.logTestingPlaygroundURL
+
+  const heading = screen.getByRole('heading')
+  expect(heading).toBeInTheDocument()
+})
+})
