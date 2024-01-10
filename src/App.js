@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header currentUser={currentUser} signout={signout} />
       <Routes>
         <Route path="/" element={< Home />} />
         <Route path="/about-us" element={<AboutUs />} />
