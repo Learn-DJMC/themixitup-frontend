@@ -5,6 +5,7 @@ import mockUsers from './mockUsers';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import AboutUs from './Pages/AboutUs';
+import Home from './Pages/Home';
 import NotFound from './Pages/NotFound';
 import RecipesIndex from './Pages/RecipesIndex';
 import RecipesProtectedIndex from './Pages/RecipesProtectedIndex';
@@ -23,6 +24,7 @@ const App = () => {
     <>
       <Header />
       <Routes>
+        <Route path="/" element={< Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
         <Route path="recipes" element={<RecipesIndex />} />
