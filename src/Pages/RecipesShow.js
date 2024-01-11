@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 
 const RecipesShow = () => {
-    
-    return (
-        <h1> Recipes Show </h1>
-    )
-}
+  return <h1> Recipes Show </h1>;
+};
 
-export default RecipesShow
+export default RecipesShow;

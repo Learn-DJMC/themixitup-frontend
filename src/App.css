@@ -36,12 +36,12 @@
     transform: rotate(360deg);
   }
 }
- 
+
 .Header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f8f8f8; 
+  background-color: #f8f8f8;
   padding: 10px;
 }
 
@@ -57,25 +57,24 @@
 
 .NavItem a {
   text-decoration: none;
-  color: #333; 
+  color: #333;
   font-weight: bold;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 .NavItem a:hover {
-  color: #ff6347; 
+  color: #ff6347;
 }
-
 
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f8f8f8; 
+  background-color: #f8f8f8;
   text-align: center;
   padding: 10px;
-  border-top: 1px solid #ddd; 
+  border-top: 1px solid #ddd;
 }
 
 .SignIn2 {
@@ -111,10 +110,40 @@ Input[type="submit"] {
 }
 
 .aboutUsContainer {
-  font-size: 15px; 
+  font-size: 15px;
   padding: 20px;
 }
 
 body {
   background-color: #ccc;
+}
+
+.index-card {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 90px;
+}
+
+.index-img {
+  width: 300px;
+  height: 300px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  flex: 0 0 calc(25% - 20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
