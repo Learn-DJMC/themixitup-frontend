@@ -1,29 +1,134 @@
 let mockRecipes = [
-    {
-        id: 1,
-        title: "Recipe 1",
-        category: "",
-        dietary_restrictions: "",
-        rating: 0,
-        description: "Default description",
-        ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
-        instructions: ["Step 1", "Step 2", "Step 3"],
-        image: "recipe1",
-        user_id: 1
-    },
-    {
-        id: 2,
-        title: "Recipe 2",
-        category: "",
-        dietary_restrictions: "",
-        rating: 0,
-        description: "Default description",
-        ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
-        instructions: ["Step 1", "Step 2", "Step 3"],
-        image: "recipe1",
-        user_id: 2
-    }
+  {
+    id: 1,
+    title: "Recipe 1",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 1,
+  },
+  {
+    id: 2,
+    title: "Recipe 2",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 1,
+  },
+  {
+    id: 3,
+    title: "Recipe 3",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 1,
+  },
+  {
+    id: 4,
+    title: "Recipe 4",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 1,
+  },
+  {
+    id: 2,
+    title: "Recipe 5",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 2,
+  },
+  {
+    id: 5,
+    title: "Recipe 6",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 2,
+  },
+  {
+    id: 6,
+    title: "Recipe 7",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 2,
+  },
+  {
+    id: 7,
+    title: "Recipe 8",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 2,
+  },
+  {
+    id: 8,
+    title: "Recipe 9",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 2,
+  },
+  {
+    id: 9,
+    title: "Recipe 10",
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
+    description: "Default description",
+    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+    instructions: ["Step 1", "Step 2", "Step 3"],
+    image:
+      "https://assets.bonappetit.com/photos/5d7a54154af9d5000adbfcb5/1:1/w_1280,c_limit/Amiel-Pasta-Alla-American-LEDE.jpg",
+    user_id: 2,
+  },
+];
 
-]
-
-export default mockRecipes
+export default mockRecipes;
