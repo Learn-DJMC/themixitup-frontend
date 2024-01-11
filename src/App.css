@@ -77,3 +77,44 @@ footer {
   padding: 10px;
   border-top: 1px solid #ddd; 
 }
+
+.SignIn2 {
+  text-align: center;
+}
+
+.SignIn2 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+FormGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+Label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+Input {
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+Input[type="submit"] {
+  align-self: flex;
+}
+
+.aboutUsContainer {
+  font-size: 15px; 
+  padding: 20px;
+}
+
+body {
+  background-color: #ccc;
+}

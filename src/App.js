@@ -18,8 +18,16 @@ import { Routes, Route } from 'react-router-dom';
 
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(mockUsers[0])
+  const [currentUser, setCurrentUser] = useState(mockUsers[null])
   const [recipe, setRecipe] = useState(mockRecipes)
+
+  const signout = () => {
+
+  }
+
+  const signin = () => {
+    
+  }
 
   return (
     <>
@@ -31,7 +39,7 @@ const App = () => {
         <Route path="recipes" element={<RecipesIndex />} />
         <Route path="recipes-protected-index" element={<RecipesProtectedIndex />} />
         <Route path="/show" element={< RecipesShow />} />
-        <Route path="signin" element={<SignIn />} />
+        <Route path="signin" element={<SignIn signin={signin}/>} />
         <Route path="signup" element={<SignUp />} />
         <Route path="signout" element={<SignOut />} />
       </Routes>
