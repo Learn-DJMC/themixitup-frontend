@@ -16,12 +16,14 @@ import SignUp from "./Pages/SignUp";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(mockUsers[null]);
+  const [currentUser, setCurrentUser] = useState(mockUsers[0]);
   const [recipes, setRecipes] = useState(mockRecipes);
 
   const signout = () => {};
 
   const signin = () => {};
+
+  const deleteRecipe = () => {};
 
   return (
     <>
@@ -31,7 +33,16 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/recipes" element={<RecipesIndex recipes={recipes} />} />
         {currentUser && (
-          <Route path="/myrecipes" element={<RecipesProtectedIndex />} />
+          <Route
+            path="/myrecipes"
+            element={
+              <RecipesProtectedIndex
+                currentUser={currentUser}
+                recipes={recipes}
+                deleteRecipe={deleteRecipe}
+              />
+            }
+          />
         )}
         <Route path="/show/:id" element={<RecipesShow recipes={recipes} />} />
         <Route path="/signin" element={<SignIn signin={signin} />} />
