@@ -33,7 +33,7 @@ const App = () => {
         {currentUser && (
           <Route path="/myrecipes" element={<RecipesProtectedIndex />} />
         )}
-        <Route path="/show/:id" element={<RecipesShow />} />
+        <Route path="/show/:id" element={<RecipesShow recipes={recipes} />} />
         <Route path="/signin" element={<SignIn signin={signin} />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signout" element={<SignOut />} />
