@@ -10,6 +10,7 @@ import NotFound from "./Pages/NotFound";
 import RecipesIndex from "./Pages/RecipesIndex";
 import RecipesProtectedIndex from "./Pages/RecipesProtectedIndex";
 import RecipesShow from "./Pages/RecipesShow";
+import RecipesNew from "./Pages/RecipesNew";
 import SignIn from "./Pages/SignIn";
 import SignOut from "./Pages/SignOut";
 import SignUp from "./Pages/SignUp";
@@ -25,6 +26,8 @@ const App = () => {
 
   const deleteRecipe = () => {};
 
+  const createRecipe = () => {};
+
   return (
     <>
       <Header currentUser={currentUser} signout={signout} />
@@ -33,16 +36,27 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/recipes" element={<RecipesIndex recipes={recipes} />} />
         {currentUser && (
-          <Route
-            path="/myrecipes"
-            element={
-              <RecipesProtectedIndex
-                currentUser={currentUser}
-                recipes={recipes}
-                deleteRecipe={deleteRecipe}
-              />
-            }
-          />
+          <>
+            <Route
+              path="/myrecipes"
+              element={
+                <RecipesProtectedIndex
+                  currentUser={currentUser}
+                  recipes={recipes}
+                  deleteRecipe={deleteRecipe}
+                />
+              }
+            />
+            <Route
+              path="/new"
+              element={
+                <RecipesNew
+                  createRecipe={createRecipe}
+                  currentUser={currentUser}
+                />
+              }
+            />
+          </>
         )}
         <Route path="/show/:id" element={<RecipesShow recipes={recipes} />} />
         <Route path="/signin" element={<SignIn signin={signin} />} />
