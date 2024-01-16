@@ -20,6 +20,9 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState(mockUsers[0]);
   const [recipes, setRecipes] = useState(mockRecipes);
 
+  // const URL = "https://mixitup-backend.onrender.com"
+  const URL = "http://localhost:3000/";
+
   const signout = () => {};
 
   const signin = () => {};
