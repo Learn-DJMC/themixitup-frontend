@@ -39,33 +39,6 @@ const RecipesNew = ({ createRecipe, currentUser }) => {
               onChange={handleChange}
             />
           </FormGroup>
-          {/* <FormGroup>
-          <Label for="category">Category</Label>
-          <Input
-            id="category"
-            name="category"
-            type="select"
-            onChange={handleChange}
-          >
-            <option>Category 1</option>
-            <option>Category 2</option>
-          </Input>
-        </FormGroup>
-        <FormGroup>
-          <Label for="dietary_restrictions">Dietary Restrictions</Label>
-          <Input
-            id="dietary_restrictions"
-            multiple
-            name="selectMulti"
-            type="select"
-            onChange={handleChange}
-          >
-            <option>Vegan</option>
-            <option>Vegetarian</option>
-            <option>Gluten-Free</option>
-            <option>Keto</option>
-          </Input>
-        </FormGroup> */}
           <FormGroup>
             <Label for="description">Description</Label>
             <Input
