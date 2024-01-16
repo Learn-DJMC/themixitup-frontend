@@ -10,6 +10,7 @@ import NotFound from "./Pages/NotFound";
 import RecipesIndex from "./Pages/RecipesIndex";
 import RecipesProtectedIndex from "./Pages/RecipesProtectedIndex";
 import RecipesShow from "./Pages/RecipesShow";
+import RecipesEdit from "./Pages/RecipesEdit";
 import RecipesNew from "./Pages/RecipesNew";
 import SignIn from "./Pages/SignIn";
 import SignOut from "./Pages/SignOut";
@@ -30,6 +31,8 @@ const App = () => {
   const deleteRecipe = () => {};
 
   const createRecipe = () => {};
+
+  const updateRecipe = () => {};
 
   return (
     <>
@@ -65,6 +68,7 @@ const App = () => {
         <Route path="/signin" element={<SignIn signin={signin} />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signout" element={<SignOut />} />
+        <Route path="/edit/:id" element={<RecipesEdit recipes={recipes} updateRecipe={updateRecipe} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
