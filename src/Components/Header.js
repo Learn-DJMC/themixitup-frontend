@@ -39,8 +39,9 @@ const Header = ({ currentUser, signout }) => {
               <NavLink to="/signout">Sign Out</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/recipes-protected-index">My Recipes</NavLink>
+              <NavLink to="/myrecipes">My Recipes</NavLink>
             </NavItem>
+            
           </>
         )}
       </main>
