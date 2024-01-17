@@ -106,7 +106,17 @@ const App = () => {
       .catch((errors) => console.log(errors))
   };
 
-  const deleteRecipe = () => { };
+  const deleteRecipe = (id) => { 
+    fetch(`${URL}/recipes/${id}`,{
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"DELETE"
+    })
+    .then((response) => response.json())
+    .then(() => readReacipes())
+    .catch((errors) => console.log("delete errors:", errors))
+  };
 
 
 
