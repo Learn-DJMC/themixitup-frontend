@@ -110,7 +110,18 @@ const App = () => {
 
 
 
-  const updateRecipe = () => { };
+  const updateRecipe = ( recipe, id ) => { 
+    fetch(`${URL}/recipes/${id}`,{
+      body: JSON.stringify(recipe),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"PATCH"
+    })
+    .then((response) => response.json())
+    .then(() => readReacipes())
+    .catch((errors) => console.log("Recipe update error:", errors))
+  };
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
