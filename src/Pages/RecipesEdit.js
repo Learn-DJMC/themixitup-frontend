@@ -20,7 +20,12 @@ const navigate = useNavigate();
   });
 
   const handleChange = (e) => {
-    setEditRecipe({ ...editRecipe, [e.target.name]: e.target.value.split("\n") });
+    setEditRecipe({
+      ...editRecipe,
+      [e.target.name]: e.target.name === "ingredients" || e.target.name === "instructions"
+        ? e.target.value.split("\n")
+        : e.target.value
+    });
   };
 
   const handleSubmit = () => {
