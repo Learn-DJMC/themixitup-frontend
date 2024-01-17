@@ -19,7 +19,7 @@ import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null);
-  const [recipes, setRecipes] = useState(mockRecipes);
+  const [recipes, setRecipes] = useState([]);
 
   // const URL = "https://mixitup-backend.onrender.com"
   const URL = "http://localhost:3000";
@@ -86,13 +86,31 @@ const App = () => {
       .catch((error) => console.log("login errors: ", error));
   };
 
-  const readReacipes = () => {};
+  const readReacipes = () => {
+    fetch(`${URL}/recipes`)
+      .then((response) => response.json())
+      .then((payload) => setRecipes(payload))
+      .catch((error) => console.log(error))
+  };
 
-  const deleteRecipe = () => {};
+  const createRecipe = (recipe) => {
+    fetch(`${URL}/myrecipes`, {
+      body: JSON.stringify(recipe),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => response.json())
+      .then((payload) => readReacipes())
+      .catch((errors) => console.log(errors))
+  };
 
-  const createRecipe = () => {};
+  const deleteRecipe = () => { };
 
-  const updateRecipe = () => {};
+
+
+  const updateRecipe = () => { };
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user");

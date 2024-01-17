@@ -6,9 +6,9 @@ const RecipesNew = ({ createRecipe, currentUser }) => {
   const navigate = useNavigate();
   const [newRecipe, setNewRecipe] = useState({
     title: "",
-    category: "",
-    dietary_restrictions: "",
-    rating: null,
+    category: "default",
+    dietary_restrictions: "default",
+    rating: 0,
     description: "",
     ingredients: [],
     instructions: [],
@@ -17,7 +17,12 @@ const RecipesNew = ({ createRecipe, currentUser }) => {
   });
 
   const handleChange = (e) => {
-    setNewRecipe({ ...newRecipe, [e.target.name]: e.target.value.split("\n") });
+    setNewRecipe({
+      ...newRecipe,
+      [e.target.name]: e.target.name === "ingredients" || e.target.name === "instructions"
+        ? e.target.value.split("\n")
+        : e.target.value
+    });
   };
 
   const handleSubmit = () => {
