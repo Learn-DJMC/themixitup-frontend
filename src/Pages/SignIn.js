@@ -1,19 +1,17 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { useNavigate, useParams } from "react-router-dom";
 
 const SignIn = ({ signin }) => {
   const formRef = useRef();
-
   const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
     const userInfo = {
-      user: { user: data.user, password: data.password },
+      user: { email: data.email, password: data.password },
     };
     signin(userInfo);
     navigate("/");
@@ -28,11 +26,11 @@ const SignIn = ({ signin }) => {
       <div className="SignIn2">
         <Form innerRef={formRef} onSubmit={handleSubmit}>
           <FormGroup>
-            <Label for="username">UserName</Label>
+            <Label for="email">Email</Label>
             <Input
-              name="username"
-              placeholder="What is your User Name?"
-              type="text"
+              name="email"
+              placeholder="What is your email?"
+              type="email"
             />
             <Label for="password">Password</Label>
             <Input

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import mockRecipes from "./mockRecipes";
 import mockUsers from "./mockUsers";
@@ -18,21 +18,89 @@ import SignUp from "./Pages/SignUp";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(mockUsers[0]);
+  const [currentUser, setCurrentUser] = useState(null);
   const [recipes, setRecipes] = useState(mockRecipes);
 
   // const URL = "https://mixitup-backend.onrender.com"
-  const URL = "http://localhost:3000/";
+  const URL = "http://localhost:3000";
 
-  const signout = () => {};
+  const signout = () => {
+    fetch(`${URL}/logout`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: localStorage.getItem("token"),
+      },
+      method: "DELETE",
+    })
+      .then((payload) => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        setCurrentUser(null);
+      })
+      .catch((error) => console.log("log out errors: ", error));
+  };
 
-  const signin = () => {};
+  const signin = (userInfo) => {
+    fetch(`${URL}/login`, {
+      body: JSON.stringify(userInfo),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        localStorage.setItem("token", response.headers.get("Authorization"));
+        return response.json();
+      })
+      .then((payload) => {
+        localStorage.setItem("user", JSON.stringify(payload));
+        setCurrentUser(payload);
+      })
+      .catch((error) => console.log("login errors: ", error));
+  };
+
+  const signup = (userInfo) => {
+    fetch(`${URL}/signup`, {
+      body: JSON.stringify(userInfo),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        localStorage.setItem("token", response.headers.get("Authorization"));
+        return response.json();
+      })
+      .then((payload) => {
+        localStorage.setItem("user", JSON.stringify(payload));
+        setCurrentUser(payload);
+      })
+      .catch((error) => console.log("login errors: ", error));
+  };
+
+  const readReacipes = () => {};
 
   const deleteRecipe = () => {};
 
   const createRecipe = () => {};
 
   const updateRecipe = () => {};
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      setCurrentUser(JSON.parse(loggedInUser));
+    }
+    readReacipes();
+  }, []);
 
   return (
     <>
@@ -66,9 +134,14 @@ const App = () => {
         )}
         <Route path="/show/:id" element={<RecipesShow recipes={recipes} />} />
         <Route path="/signin" element={<SignIn signin={signin} />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp signup={signup} />} />
         <Route path="/signout" element={<SignOut />} />
-        <Route path="/edit/:id" element={<RecipesEdit recipes={recipes} updateRecipe={updateRecipe} />} />
+        <Route
+          path="/edit/:id"
+          element={
+            <RecipesEdit recipes={recipes} updateRecipe={updateRecipe} />
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
