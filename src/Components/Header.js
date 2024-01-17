@@ -41,6 +41,9 @@ const Header = ({ currentUser, signout }) => {
             <NavItem>
               <NavLink to="/myrecipes">My Recipes</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink to="/new">Create New Recipe</NavLink>
+            </NavItem>
           </>
         )}
       </main>
