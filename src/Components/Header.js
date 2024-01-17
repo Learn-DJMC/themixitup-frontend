@@ -36,12 +36,11 @@ const Header = ({ currentUser, signout }) => {
         {currentUser && (
           <>
             <NavItem>
-              <NavLink to="/signout">Sign Out</NavLink>
+              <NavLink onClick={handleClick}>Sign Out</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/myrecipes">My Recipes</NavLink>
             </NavItem>
-            
           </>
         )}
       </main>

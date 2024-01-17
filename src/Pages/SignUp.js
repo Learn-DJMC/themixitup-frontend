@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = ({ signup }) => {
   const formRef = useRef();
@@ -12,7 +12,11 @@ const SignUp = ({ signup }) => {
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
     const userInfo = {
-      user: { email: data.email, password: data.password },
+      user: {
+        email: data.email,
+        username: data.username,
+        password: data.password,
+      },
     };
     signup(userInfo);
     navigate("/");
