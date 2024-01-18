@@ -1,6 +1,6 @@
 # MIX-IT UP App
 
-Welcome to the Mix it up App by DJ-MC (Derek, Jacob, Markayel and Corey)! This is a recipe book React-based web application that allows users to manage and explore a collection of recipes. Whether you're a cooking enthusiast or just looking for new culinary inspirations, this app has got you covered.
+Welcome to the Mix it up App by DJ-MC (Derek, Jacob, Markayel and Corey)! This is a recipe book React-based web application that allows users to manage and explore a collection of recipes. Whether you're a cooking enthusiast or just looking for new culinary inspirations, this app has got you covered. Mix it up is supported by Rails API and has full CRUD functionality. It gives users the ability to login and create an account using User authentication with Devise. Pages and Components are yarn tested. 
 
 ## Table of Contents
 
