@@ -145,7 +145,7 @@ const App = () => {
     <>
       <Header currentUser={currentUser} signout={signout} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home currentUser={currentUser} />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/recipes" element={<RecipesIndex recipes={recipes} />} />
         {currentUser && (
