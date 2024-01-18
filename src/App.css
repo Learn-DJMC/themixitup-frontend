@@ -236,3 +236,29 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+.Heading3 {
+  text-align: center;
+}
+
+.Pitch3 {
+  position: fixed;
+  left: 35%;
+  top: 50%; /* Optional: Adjust the top position if needed */
+  transform: translate(-50%, -50%);
+  border: 2px solid #333; /* Border color and thickness */
+  padding: 20px; /* Padding inside the box */
+  width: fit-content; /* Adjust the width as needed */
+}
+
+.SignUp3 {
+  position: fixed;
+  left: 80%;
+  top: 40%;
+}
+
+.SignIn3 {
+  position: fixed;
+  left: 80%;
+  top: 45%;
+}
