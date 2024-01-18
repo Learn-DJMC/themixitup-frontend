@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const AboutUs = () => {
   return (
     <div className="aboutUsContainer">
-      <h1>
+      <h3>
         {" "}
         "Meet our dynamic team of four students who embarked on an exciting
         journey through a rigorous coding bootcamp. Comprising Derek, Jacob,
@@ -14,7 +14,7 @@ const AboutUs = () => {
         grow. With a collective dedication to honing our programming skills,
         we're not just students; we're a tight-knit community of aspiring
         developers eager to make a mark in the ever-evolving tech landscape."{" "}
-      </h1>
+      </h3>
     </div>
   );
 };

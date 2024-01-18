@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: gray;
   padding: 10px;
 }
 
@@ -71,7 +71,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: gray;
   text-align: center;
   padding: 10px;
   border-top: 1px solid #ddd;
@@ -110,12 +110,24 @@ Input[type="submit"] {
 }
 
 .aboutUsContainer {
-  font-size: 15px;
-  padding: 20px;
+  position: fixed;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  border: 2px solid #333; 
+  padding: 2px; 
+  width: fit-content; 
+  background-color: gray;
 }
 
+
 body {
-  background-color: #ccc;
+  margin: 0; 
+  padding: 0; 
+  background-image: url('../src/Assets/Food-Background.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .index-card {
@@ -244,11 +256,12 @@ body {
 .Pitch3 {
   position: fixed;
   left: 35%;
-  top: 50%; /* Optional: Adjust the top position if needed */
+  top: 50%; 
   transform: translate(-50%, -50%);
-  border: 2px solid #333; /* Border color and thickness */
-  padding: 20px; /* Padding inside the box */
-  width: fit-content; /* Adjust the width as needed */
+  border: 2px solid #333; 
+  padding: 2px; 
+  width: fit-content; 
+  background-color: gray;
 }
 
 .SignUp3 {
