@@ -21,7 +21,7 @@ const SignIn = ({ signin }) => {
   return (
     <>
       <div className="SignIn">
-        <h2>Sign In</h2>
+       
       </div>
       <div className="SignIn2">
         <Form innerRef={formRef} onSubmit={handleSubmit}>
