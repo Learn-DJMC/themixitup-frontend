@@ -16,7 +16,8 @@ const AboutUs = () => {
       </h4>
       <h5>
         Derek:
-        As a dedicated student, I specialize in both front-end and back-end web development, with a focus on React.js and Ruby on Rails. My knowledge lies in creating dynamic and responsive user interfaces using React.js and building robust web applications on the server-side with Ruby on Rails. knowledge  in crafting efficient database models and RESTful APIs, I am passionate about delivering high-quality software solutions. My comprehensive skill set allows me to contribute effectively to the end-to-end development process.</h5>
+        As a dedicated student, I specialize in both front-end and back-end web development, with a focus on React.js and Ruby on Rails. My knowledge lies in creating dynamic and responsive user interfaces using React.js and building robust web applications on the server-side with Ruby on Rails. knowledge  in crafting efficient database models and RESTful APIs, I am passionate about delivering high-quality software solutions. My comprehensive skill set allows me to contribute effectively to the end-to-end development process.
+      </h5>
       <h5>
         Jacob:
         Hey, I'm Jacob Amezola, a passionate software developer skilled in Ruby on Rails, React.js, and Javascript. With a knack for creative problem-solving, I bring a unique blend of innovation to my work. Eager to learn and contribute to cutting-edge projects, let's code the future together!
