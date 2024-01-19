@@ -110,14 +110,11 @@ Input[type="submit"] {
 }
 
 .aboutUsContainer {
-  position: fixed;
-  left: 50%;
-  top: 50%; 
-  transform: translate(-50%, -50%);
-  border: 2px solid #333; 
-  padding: 2px; 
-  width: fit-content; 
-  background-color: gray;
+    padding: 2rem;
+    background-position: center;
+    border: white 0.1rem solid;
+    border-color: azure;
+    text-align: center;
 }
 
 
