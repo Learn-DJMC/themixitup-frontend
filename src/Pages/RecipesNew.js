@@ -90,7 +90,7 @@ const RecipesNew = ({ createRecipe, currentUser }) => {
               onChange={handleChange}
             />
           </FormGroup>
-          <Button onClick={handleSubmit}>Add Recipe</Button>
+          <Button className="buttons" onClick={handleSubmit}>Add Recipe</Button>
         </div>
       </Form>
     </div>

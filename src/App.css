@@ -1,7 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand&family=Rubik&family=Shadows+Into+Light&display=swap");
+
 .App {
   text-align: center;
 }
+body {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
 
+.text-block {
+  max-width: 70%;
+  font-size: 2vh;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 10vh;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -21,11 +72,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #365902;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #fb6161;
 }
 
 @keyframes App-logo-spin {
@@ -41,8 +92,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(128, 128, 128, 0);
+  background-color: #365902;
   padding: 10px;
+  list-style: none;
+  font-family: "Rubik", sans-serif;
 }
 
 .FoodLogo {
@@ -50,19 +103,19 @@
   width: 60px;
 }
 
-.NavItem {
+.NavLink {
   list-style: none;
   margin: 0;
 }
 
-.NavItem a {
+.NavLink a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
   font-size: 16px;
 }
 
-.NavItem a:hover {
+.NavLink a:hover {
   color: #ff6347;
 }
 
@@ -71,10 +124,9 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(249, 248, 195);
+  background-color: #365902;
   text-align: center;
   padding: 1px;
-  border-top: 1px solid #ddd;
 }
 
 .SignIn2 {
@@ -110,20 +162,35 @@ Input[type="submit"] {
 }
 
 .aboutUsContainer {
-    padding: 2rem;
-    background-position: center;
-    border: white 0.1rem solid;
-    border-color: azure;
-    text-align: center;
+  padding: 2rem;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #365902;
+  opacity: 0.7;
+}
+.aboutUs {
+  text-align: center;
+  color: #f25c05;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  background-color: #365902;
+  opacity: 0.7;
+  font-family: "Quicksand", sans-serif;
 }
 
-
 body {
-  margin: 0; 
-  padding: 0; 
-  background-image: url('../src/Assets/Food-Background.png'); 
+  margin: 0;
+  padding: 0;
+  background-image: url(../src/Assets/foodappp.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  border-top: 100px;
   height: 100vh;
 }
 
@@ -133,7 +200,7 @@ body {
   text-align: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-bottom: 90px;
+  padding-bottom: 10px;  
 }
 
 .index-img {
@@ -208,7 +275,7 @@ body {
 }
 
 .recipe-new {
-  padding-top: 25vh;
+  padding-top: 5vh;
   text-align: center;
 }
 
@@ -248,17 +315,22 @@ body {
 
 .Heading3 {
   text-align: center;
+  font-family: "Quicksand", sans-serif;
+  color: #bf0404;
 }
 
 .Pitch3 {
   position: fixed;
-  left: 38%;
-  top: 50%; 
+  left: 40%;
+  top: 40%;
   transform: translate(-50%, -50%);
-  border: 4px solid #33333300; 
-  padding: 2px; 
-  width: fit-content; 
+  border: 4px solid #33333300;
+  padding: 2px;
+  width: fit-content;
   background-color: rgba(128, 128, 128, 0);
+  font-family: "Quicksand", sans-serif;
+  background-color: #365902;
+  opacity: 0.7;
 }
 
 .SignUp3 {

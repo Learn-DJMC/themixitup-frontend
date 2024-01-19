@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 const AboutUs = () => {
   return (
-    <div className="aboutUsContainer">
+    <> 
+   
+      <div className="aboutUs">
       <h4>
         "Meet our dynamic team of four students who embarked on an exciting
         journey through a rigorous coding bootcamp. Comprising Derek, Jacob,
@@ -14,7 +16,8 @@ const AboutUs = () => {
         we're not just students; we're a tight-knit community of aspiring
         developers eager to make a mark in the ever-evolving tech landscape."
       </h4>
-      <h5>
+      </div>
+      <div className="aboutUsContainer"> <h5>
         Derek:
         As a dedicated student, I specialize in both front-end and back-end web development, with a focus on React.js and Ruby on Rails. My knowledge lies in creating dynamic and responsive user interfaces using React.js and building robust web applications on the server-side with Ruby on Rails. knowledge  in crafting efficient database models and RESTful APIs, I am passionate about delivering high-quality software solutions. My comprehensive skill set allows me to contribute effectively to the end-to-end development process.</h5>
       <h5>
@@ -30,6 +33,7 @@ const AboutUs = () => {
         Hi, I'm Corey Cass, a passionate and dedicated software developer with expertise in Ruby on Rails, React.js, and JavaScript. With a background in technical support and customer service, I bring a unique blend of problem-solving skills and a strong attention to detail to my work. I thrive in collaborative environments and am constantly seeking opportunities to expand my knowledge and contribute to innovative projects.
       </h5>
     </div>
+    </>
   );
 };
 

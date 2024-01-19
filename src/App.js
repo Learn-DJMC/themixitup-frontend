@@ -94,7 +94,7 @@ const App = () => {
   };
 
   const createRecipe = (recipe) => {
-    fetch(`${URL}/myrecipes`, {
+    fetch(`${URL}/recipes`, {
       body: JSON.stringify(recipe),
       headers: {
         "Content-Type": "application/json"
