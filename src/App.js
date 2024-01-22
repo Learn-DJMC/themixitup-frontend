@@ -21,8 +21,8 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [recipes, setRecipes] = useState([]);
 
-  // const URL = "https://mixitup-backend.onrender.com"
-  const URL = "http://localhost:3000";
+  const URL = "https://mixitup-backend.onrender.com"
+  // const URL = "http://localhost:3000";
 
   const signout = () => {
     fetch(`${URL}/logout`, {
